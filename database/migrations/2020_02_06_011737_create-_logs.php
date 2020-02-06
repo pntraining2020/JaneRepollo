@@ -16,10 +16,10 @@ class CreateLogs extends Migration
         Schema::create('logs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('employee_id');
-            $table->time('clock_in')->nullable();
-            $table->time('break_start')->nullable();
-            $table->time('break_end')->nullable();
-            $table->time('clock_out')->nullable();
+            $table->string('clock_in', 255)->nullable();
+            $table->string('break_start', 255)->nullable();
+            $table->string('break_end', 255)->nullable();
+            $table->string('clock_out', 255)->nullable();
             $table->timestamps();
         });
     }
